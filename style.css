@@ -1,0 +1,195 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: montserrat;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  width: 90%;
+  margin: 50px 0px 0px 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+  background-color: #f9f9f9;
+  padding: 25px;
+  gap: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin: 35px 0px 0px 0px;
+}
+
+.container .display-status {
+  display: none;
+}
+
+.container .status-visible {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 450;
+  margin-bottom: -10px;
+}
+
+.container .success {
+  color: #218838;
+}
+
+.container .remove {
+  color: #c82333;
+}
+
+.container h2 {
+  margin: 0px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.input-form #expense-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.input-form input,
+.input-form select,
+.input-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: montserrat;
+  width: 100%;
+}
+
+.input-form option {
+  padding: 12px;
+}
+
+.input-form input:focus,
+.input-form select:focus {
+  border: none;
+  outline: 1px solid #191919;
+}
+
+.input-form button {
+  background-color: #218838;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.input-form button:hover {
+  opacity: 95%;
+}
+
+.input-form button:focus {
+  border: none;
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.reset-button,
+.edit-button,
+.delete-button {
+  width: 150px;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.reset-button {
+  background-color: #ff0000;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #ff5733;
+}
+
+.reset-button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.expense-list {
+  display: none;
+}
+
+.expense-summary {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 15px;
+}
+
+.expense-summary h3 {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    margin-top: 25px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 60%;
+  }
+
+  .button-container {
+    width: auto;
+    gap: auto;
+  }
+
+  .expense-summary {
+    width: 100%;
+  }
+
+  th {
+    font-size: 12px;
+    padding: 8px 2px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
